@@ -1,7 +1,12 @@
+const cors = require('cors');
 const express = require('express');
+
 require('dotenv').config();
+require('./api/config/db');
 
 const app = express();
+
+app.use(cors());
 
 app.use((req, res, next) => {
   const error = new Error('404 Not Found');
