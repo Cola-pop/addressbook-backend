@@ -1,13 +1,11 @@
 const mongoose = require('mongoose');
 
-mongoose.set('useFindAndModify', false);
-
 const AddressSchema = new mongoose.Schema({
   firstName: {
     type: String,
     required: true,
   },
-  surName: {
+  surname: {
     type: String,
     required: true,
   },
