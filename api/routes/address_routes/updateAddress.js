@@ -6,8 +6,12 @@ router.put('/:id', async (req, res) => {
   try {
     const { id } = req.params;
 
-    await Address.updateOne({ id }, req.body);
+    // await Address.updateOne({ id }, req.body);
     const updatedAddress = await Address.findById(id);
+
+    updatedAddress.email = req.body.email;
+    updatedAddress.phone = req.body.phone;
+    updatedAddress.save();
 
     return res.status(200).json({
       success: true,

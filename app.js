@@ -11,7 +11,6 @@ const addressRoutes = require('./api/routes/address_routes/index');
 const app = express();
 
 app.use(bodyPasrser.json({ limit: '10mb' }));
-app.use(bodyPasrser.urlencoded({ limit: '10mb', extended: true }));
 app.use(cors());
 app.use(morgan('dev'));
 
