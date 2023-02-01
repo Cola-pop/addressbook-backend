@@ -5,7 +5,10 @@ const Address = require('../../models/address');
 router.delete('/:id', async (req, res) => {
   try {
     const deletedAddress = await Address.findByIdAndDelete(req.params.id);
-    return res.status(200).json(deletedAddress);
+    return res.status(200).json({
+      success: true,
+      deletedAddress,
+    });
   } catch (error) {
     return res.status(400).json({
       success: false,
