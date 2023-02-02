@@ -9,6 +9,8 @@ router.put('/:id', async (req, res) => {
     // await Address.updateOne({ id }, req.body);
     const updatedAddress = await Address.findById(id);
 
+    updatedAddress.firstName = req.body.firstName;
+    updatedAddress.surname = req.body.surname;
     updatedAddress.email = req.body.email;
     updatedAddress.phone = req.body.phone;
     updatedAddress.save();
