@@ -18,7 +18,7 @@ Make sure you install dependencies first using:
 
 ### `npm i`
 
-Runs the app in the development mode.\
+Runs the app in the development mode.
 
 ## Note
 
